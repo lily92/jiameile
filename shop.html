@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>嘉媚乐</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="flex flex-center header fix">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="swiper-container banner positionr">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide text-center">
+        <!-- PC端banner  -->
+        <img src="images/about-banner.jpg" alt="" srcset="" class="hidden-xs">
+
+        <!-- 移动端banner -->
+        <img src="images/about-banner.jpg" alt="" srcset="" class="visible-xs">
+      </div>
+      <div class="swiper-slide text-center">
+        <!-- PC端banner  -->
+        <img src="images/about-banner.jpg" alt="" srcset="" class="hidden-xs">
+
+        <!-- 移动端banner -->
+        <img src="images/about-banner.jpg" alt="" srcset="" class="visible-xs">
+      </div>
+    </div>
+
+    <div class="swiper-pagination-banner swiper-pagination"></div>
+    <script>
+      $(function () {
+        var swiper = new Swiper('.banner', {
+          autoplay: true,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination-banner',
+            // type: 'fraction',
+            clickable: true
+          },
+        });
+      })
+    </script>
+  </div>
+  <!-- end banner -->
+
+  <!--star counters -->
+  <div class="counters container">
+    <h3 class="text-center title-main positionr">
+      <p class="main-title-en">counters</p>
+      <p class="main-title-ch color3">专柜咨询</p>
+    </h3>
+
+    <!-- map -->
+    <style>
+      .flex-nowarp {
+        flex-wrap: nowrap;
+      }
+
+      .flex-1 p {
+        flex: 1;
+        padding: 0 10px;
+      }
+      .counters .btn-submit {
+        width: 100%
+      }
+      .counters .form-box{ max-width: 100%;}
+      .form-box {height: 360px; max-height: 360px; }
+      .form-box li{ border-bottom:1px solid #e2e2e2; padding: 5px 0;}
+      .form-box ul{ height: 100%;overflow-x: hidden; overflow-y: auto;}
+      .counters .btn-submit{ background: #ff980f; color: #fff;}
+    </style>
+    <div class="flex flex-nowarp">
+      <p class="fon16 nowarp" style="flex-shrink:0">嘉媚乐专柜所在地区：</p>
+      <form action="" class="flex flex-1 w100">
+        <p>
+          <input type="text" placeholder="省份" class="input-text">
+        </p>
+        <p>
+          <input type="text" placeholder="城市" class="input-text">
+        </p>
+        <p>
+          <input type="text" placeholder="关键词" class="input-text">
+        </p>
+        <p>
+          <input type="button" value="搜索" class="btn-submit box-shadow w100" />
+        </p>
+      </form>
+    </div>
+    <div class=" box-shadow map flex">
+
+      <div class="w50 flex flex-center ">
+        <div class="form-box">
+          <ul>
+            <li>
+              <p><b>北京石景山喜隆多新国际购物中心</b></p>
+              <div>
+                <p>地址：北京市石景山区阜石路300号喜隆多新国际购物中心</p>
+                <p>电话：020-0332233</p>
+              </div>
+            </li>
+            <li>
+                <p><b>北京石景山喜隆多新国际购物中心</b></p>
+                <div>
+                  <p>地址：北京市石景山区阜石路300号喜隆多新国际购物中心</p>
+                  <p>电话：020-0332233</p>
+                </div>
+              </li>
+              <li>
+                  <p><b>北京石景山喜隆多新国际购物中心</b></p>
+                  <div>
+                    <p>地址：北京市石景山区阜石路300号喜隆多新国际购物中心</p>
+                    <p>电话：020-0332233</p>
+                  </div>
+                </li>
+            <li>
+              <p><b>北京石景山喜隆多新国际购物中心</b></p>
+              <div>
+                <p>地址：北京市石景山区阜石路300号喜隆多新国际购物中心</p>
+                <p>电话：020-0332233</p>
+              </div>
+            </li>
+            <li>
+              <p><b>北京石景山喜隆多新国际购物中心</b></p>
+              <div>
+                <p>地址：北京市石景山区阜石路300号喜隆多新国际购物中心</p>
+                <p>电话：020-0332233</p>
+              </div>
+            </li>
+            <li>
+              <p><b>北京石景山喜隆多新国际购物中心</b></p>
+              <div>
+                <p>地址：北京市石景山区阜石路300号喜隆多新国际购物中心</p>
+                <p>电话：020-0332233</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="w50 positionr">
+        <img src="images/map-bg.jpg" alt="" srcset="" class="w100">
+        <div class="positionb flex flex-center">
+          地图
+        </div>
+      </div>
+    </div>
+    <!-- end map -->
+
+    <!--star  线上渠道专区 -->
+    <div class="channel box-shadow">
+      <p class="fon22 channel-title text-center padding40">嘉媚乐线上渠道专区</p>
+      <div class="flex channel-flex">
+        <a href="" class="positionr">
+          <!-- 占位符，勿读后台 -->
+          <img src="images/qudao-1.jpg" alt="" srcset="" class="w100">
+          <div class="positionb">
+            <img src="images/qudao-1.jpg" alt="" srcset="" class="w100">
+          </div>
+        </a>
+        <a href="" class="positionr">
+          <!-- 占位符，勿读后台 -->
+          <img src="images/qudao-1.jpg" alt="" srcset="" class="w100">
+          <div class="positionb">
+            <img src="images/qudao-2.jpg" alt="" srcset="" class="w100">
+          </div>
+        </a>
+        <a href="" class="positionr">
+          <!-- 占位符，勿读后台 -->
+          <img src="images/qudao-1.jpg" alt="" srcset="" class="w100">
+          <div class="positionb">
+            <img src="images/qudao-3.jpg" alt="" srcset="" class="w100">
+          </div>
+        </a>
+      </div>
+      <div class="flex channel-link">
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+        <a href="" class="nowarp">嘉媚乐凌派专卖店</a>
+      </div>
+    </div>
+    <!--end 线上渠道专区 -->
+
+  </div>
+  <!-- end counters -->
+
+  <!--star  footer -->
+  <footer class="footer text-center fon14">
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>

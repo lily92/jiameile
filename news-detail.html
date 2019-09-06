@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/main.js"></script>
+  <title>嘉媚乐</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="flex flex-center header fix">
+  </header>
+  <!--end  header -->
+
+  <!--star banner -->
+  <div class="swiper-container banner positionr">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide text-center">
+        <!-- PC端banner  -->
+        <img src="images/about-banner.jpg" alt="" srcset="" class="hidden-xs">
+
+        <!-- 移动端banner -->
+        <img src="images/about-banner.jpg" alt="" srcset="" class="visible-xs">
+      </div>
+      <div class="swiper-slide text-center">
+        <!-- PC端banner  -->
+        <img src="images/about-banner.jpg" alt="" srcset="" class="hidden-xs">
+
+        <!-- 移动端banner -->
+        <img src="images/about-banner.jpg" alt="" srcset="" class="visible-xs">
+      </div>
+    </div>
+
+    <div class="swiper-pagination-banner swiper-pagination"></div>
+    <script>
+      $(function () {
+        var swiper = new Swiper('.banner', {
+          autoplay: true,
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination-banner',
+            // type: 'fraction',
+            clickable: true
+          },
+        });
+      })
+    </script>
+  </div>
+  <!-- end banner -->
+
+  <!--star news -->
+  <div class="news-detail">
+    <div class="padding40">
+        <h3 class=" text-center">嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费</h3>
+        <p class="text-center fon12 color6">发布时间：2019-03-13</p>
+    </div>
+    <div class="newsdetail-con color6 fon14">
+      <p>嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食-con嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费</p>
+      <p>嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费</p>
+      <br>
+      <p class="text-center"><img src="images/new-img.jpg" alt="" srcset="">  <img src="images/new-img.jpg" alt="" srcset=""></p>
+      <br>
+      <p>嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食-con</p>
+      <p>嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费嘉媚乐引入法国美食护肤品牌 欲抢占品类高地引领消费</p>
+    </div>
+    <div class="new-pages padding40 fon14">
+      <p class="nowarp"><a href=""  >上一篇：新开线下旗舰店，嘉媚乐抢滩700亿芳香市场</a></p>
+      <p class="nowarp"><a href=""  >下一篇：新开线下旗舰店，嘉媚乐抢滩700亿芳香市场</a></p>
+    </div>
+   
+  </div>
+  <!-- end news -->
+
+  <!--star  footer -->
+  <footer class="footer text-center fon14">
+  </footer>
+  <!-- end footer -->
+
+</body>
+
+</html>
