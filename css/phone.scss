@@ -1,4 +1,5 @@
 $color-org:#ff980f;
+$color-y:#cfab29;
 $colorf:#fff;
 $color9:#999;
 $color6:#666;
@@ -10,12 +11,12 @@ $colorfa:#fafafa;
   .fon18{ font-size: 14px;}
   /*nav*/
   .nav-btn{ width: 35px; }
-  .header{ height: 65px;}
+  .header{ height:50px; background: $color0}
   .margin100{ margin-top: 75px !important;}
 .hamburger .line{
   width: 35px;
   height: 3px;
-  background-color: #000;
+  background-color: $colorf;
   display: block;
   margin: 8px auto;
   -webkit-transition: all 0.3s ease-in-out;
@@ -31,6 +32,7 @@ $colorfa:#fafafa;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  transform: scale(0.8)
 }
 
 #nav-btn.is-active{
@@ -55,6 +57,7 @@ $colorfa:#fafafa;
   -webkit-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+ 
 }
 
 #nav-btn.is-active:before{
@@ -85,9 +88,10 @@ $colorfa:#fafafa;
   transform: translateY(-9px) rotate(90deg);
 }
   /*nav-mobile*/
-  .nav-btn{ position: fixed; z-index: 3; right: 20px; top: 10px}
+  .eng-btn{ position: fixed; z-index: 3; left: 20px;; top: 15px;}
+  .nav-btn{ position: fixed; z-index: 5; right: 10px; top: 4px}
   .nav-mobile.active{ transform: translate(0); }
-  .nav-mobile{ position: fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, .9); color: $color9; left: 0; top: 0; padding-top: 80px; z-index: 2; transform: translateX(100%); transition: .2s linear all;
+  .nav-mobile{ position: fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, .9); color: $color9; left: 0; top: 0; padding-top: 80px; z-index: 4; transform: translateX(100%); transition: .2s linear all;
    a{ color:$color9}
    li:first-child{ border-top:1px solid rgba(224, 208, 208, 0.3);}
    .nav-top{line-height: 50px; border-bottom:1px solid rgba(224, 208, 208, 0.3); padding-left: 15px;}
@@ -97,129 +101,44 @@ $colorfa:#fafafa;
    dd{line-height:40px;}
    dd a{padding-left: 25px; display: block; border-bottom: 1px solid rgba(255, 255, 255, .3) }
   }
-
-   /*index*/
-   .banner{ padding-top: 65px;}
-   .banner .swiper-pagination-bullet, .banner-newproduct .swiper-pagination-bullet{ width: 10px; height: 10px;}
-  .w50,.w40,.w60{ width: 100%;}
-  .header{ background: $colorf;}
-  .padding40{ padding: 20px 0;}
-  .new-product .con{ padding: 20px 0;}
-  .new-title{ padding: 20px 0 0 0 }
-  .new-con{ padding: 0 20px;}
-  .product {
-    padding: 20px 0;
-    .swiper-button-next-product,.swiper-button-prev-product{width: 40px;}
-  }
   .footer{
    padding: 10px ;
   } 
-  #btn_play{ max-width: 40px;}
-  /*about*/
-  .about{ padding: 25px 0 50px 0;
-    .about-logo{ padding-bottom: 25px;}
-  } 
-  .life-container{ padding: 60px 15px 70px;}
-  .life-bg1{ width: 100px;}
-  .life-bg2{ width: 120px;}
 
-.title-main{
-  .main-title-en{ font-size: 43px;}
-  .main-title-ch{ font-size: 20px;  padding: 2px 0; background: none;}
-}
-.pagenum{ padding: 25px 0 ;}
-/*news*/ 
-.newlists{
-  .new-cons{ padding: 10px ; width: 100%}
-  .new-img{ width: 100%}
-  .more{ display: block; text-align: center;}
-}
+  // index
+  .w50,.w40,.w60{ width: 100%}
+  .about{
+    .about-img{
+       border-left: 0;
+       border-top: 0;
+       text-align: center;
+       img{ max-width: 200px; margin: 0 auto; border: 5px solid $color-y}
+    }
+    .about-desc{ text-align: center;}
+  }
+  .padding25{ padding: 5px;}
 
-/*shop*/ 
-.counters .map{ margin-bottom: 25px;}
-.channel-flex{
-  padding: 0 20px;
-  a{ width: 100%; margin-bottom: 20px;}
-}
-.channel-link{
-  padding: 20px 10px 20px;
-  a{ width: 48%;}
-}
-/*join*/
-.join{
-  .join-send{ width: 100%}
-  .join-p{ padding: 20px 20px 40px 20px;}
-   b{ display: block;}
-   .join-tag-list li{ padding: 10px; width: 100%}
-   h3{ font-size: 20px;}
-}
+  .changpian {
+    .changpian-list{ flex-wrap: wrap;}
+    .changpian-list li{ width: 100%; display: none;}
+    .changpian-list li:nth-child(2),.changpian-list li:nth-child(1){ display: flex; flex-wrap: nowrap}
+ 
+    .swiper-slide{ width: 100%; height: 100%;}
+  }
+  .song {
+    .song-list{ padding: 10px 0 0 0 ;}
+    .song-list ul li{ width: 46%; margin-bottom: 5px;}
+    .song-list ul li:last-child{ display: none;}
+  }
+  .more-margin0{ margin-top: 10px;}
+  .contact .contact-p1{ font-size: 40px}
+  // end index
 
-/*top*/
-.top-list {
-  .desc{ font-size: 20px;}
-  li{ margin-top: 0;}
-  .more{ margin-bottom: 15px;}
-}
-/*.advertising-list .ad-con*/ 
-.advertising-list {
-  li{ padding: 15px;}
-  .ad-con{ padding-left: 0;}
-  .master img{ width: 50px;}
-}
-
-/*.product-center .*/ 
-.product-center{
-  .type{ width: 90px;}
-  .product-select{margin-bottom: 0;}
-}
-.product2{
-  .padding-left20{ padding-left: 0; margin-top: 15px;}
-  .pmargin{ margin-top: 15px;}
-  .w32{ width: 100%;margin-bottom: 15px;}
-  .product2-row .w50{ width: 50%}
-}
-
-.product-detail{
-  .prod-name{ font-size: 22px; padding-top: 15px;}
-  .padding-left40{ padding-left: 0;}
-  .prod-cons{ padding: 15px 0; min-height: 200px;}
-  .swiper-button-next1{ right:0;}
-  .swiper-button-prev1{ right:40px;}
+  // 写真
+  .paddingt100{ padding-top: 55px;}
+  .fon24{ font-size: 18px;}
+  .xiezhen {
+    li{  width: 100%; margin: 15px 0;}
+  }
   
-}
-.tablist {
-  li{ margin: 0 10px; font-size: 16px;}
-}
-.what0{ flex-wrap: wrap-reverse}
-
-.use {
-  .use-flex li{ width: 50%}
-  .master2{ overflow: hidden;}
-  .use-flex .use-title{ padding: 10px 5px;}
-}
-
-.menthod{
-  .use-con-desc{ height: 75px;}
-  li{margin-bottom: 15px;}
-  .use-item{ display: flex ;justify-content: center; flex-wrap: wrap}
-}
-.typelists{ display: flex;  justify-content: center; flex-wrap: wrap;}
-.miji-list{ margin:  0  0 20px;}
-.health {
-  .ys-con{ padding: 10px;}
-  .fon18{  padding-bottom: 0}
- .health-list .desc{ height: 75px; font-size: 12px;}
- .btn-rights{ right: 0; width: 35px;}
- .btn-lefts{ left: 0; width: 35px;}
- .swiper-container-health{ overflow: visible; height: 318px;;}
-}
-.book {
-  .swiper-container-book{ padding-top: 0; overflow-x: visible; height: 314px;}
-}
-.header {
-  .search-txt{ background: none}
-  .search-form{ border-bottom-color: rgba(224, 208, 208, 0.3)}
-  .phone-search{ display: flex; width: 100%; margin: 15px 0; padding:15px 0 15px 15px; background: none;}
-}
-
 }

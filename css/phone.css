@@ -10,7 +10,8 @@
     width: 35px;
   }
   .header {
-    height: 65px;
+    height: 50px;
+    background: #000;
   }
   .margin100 {
     margin-top: 75px !important;
@@ -18,7 +19,7 @@
   .hamburger .line {
     width: 35px;
     height: 3px;
-    background-color: #000;
+    background-color: #fff;
     display: block;
     margin: 8px auto;
     -webkit-transition: all 0.3s ease-in-out;
@@ -33,6 +34,7 @@
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    transform: scale(0.8);
   }
   #nav-btn.is-active {
     -webkit-transform: rotate(45deg);
@@ -79,11 +81,17 @@
     transform: translateY(-9px) rotate(90deg);
   }
   /*nav-mobile*/
-  .nav-btn {
+  .eng-btn {
     position: fixed;
     z-index: 3;
-    right: 20px;
-    top: 10px;
+    left: 20px;
+    top: 15px;
+  }
+  .nav-btn {
+    position: fixed;
+    z-index: 5;
+    right: 10px;
+    top: 4px;
   }
   .nav-mobile.active {
     transform: translate(0);
@@ -97,7 +105,7 @@
     left: 0;
     top: 0;
     padding-top: 80px;
-    z-index: 2;
+    z-index: 4;
     transform: translateX(100%);
     transition: .2s linear all;
   }
@@ -132,248 +140,67 @@
     display: block;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
-  /*index*/
-  .banner {
-    padding-top: 65px;
-  }
-  .banner .swiper-pagination-bullet, .banner-newproduct .swiper-pagination-bullet {
-    width: 10px;
-    height: 10px;
+  .footer {
+    padding: 10px;
   }
   .w50, .w40, .w60 {
     width: 100%;
   }
-  .header {
-    background: #fff;
-  }
-  .padding40 {
-    padding: 20px 0;
-  }
-  .new-product .con {
-    padding: 20px 0;
-  }
-  .new-title {
-    padding: 20px 0 0 0;
-  }
-  .new-con {
-    padding: 0 20px;
-  }
-  .product {
-    padding: 20px 0;
-  }
-  .product .swiper-button-next-product, .product .swiper-button-prev-product {
-    width: 40px;
-  }
-  .footer {
-    padding: 10px;
-  }
-  #btn_play {
-    max-width: 40px;
-  }
-  /*about*/
-  .about {
-    padding: 25px 0 50px 0;
-  }
-  .about .about-logo {
-    padding-bottom: 25px;
-  }
-  .life-container {
-    padding: 60px 15px 70px;
-  }
-  .life-bg1 {
-    width: 100px;
-  }
-  .life-bg2 {
-    width: 120px;
-  }
-  .title-main .main-title-en {
-    font-size: 43px;
-  }
-  .title-main .main-title-ch {
-    font-size: 20px;
-    padding: 2px 0;
-    background: none;
-  }
-  .pagenum {
-    padding: 25px 0;
-  }
-  /*news*/
-  .newlists .new-cons {
-    padding: 10px;
-    width: 100%;
-  }
-  .newlists .new-img {
-    width: 100%;
-  }
-  .newlists .more {
-    display: block;
+  .about .about-img {
+    border-left: 0;
+    border-top: 0;
     text-align: center;
   }
-  /*shop*/
-  .counters .map {
-    margin-bottom: 25px;
+  .about .about-img img {
+    max-width: 200px;
+    margin: 0 auto;
+    border: 5px solid #cfab29;
   }
-  .channel-flex {
-    padding: 0 20px;
+  .about .about-desc {
+    text-align: center;
   }
-  .channel-flex a {
-    width: 100%;
-    margin-bottom: 20px;
+  .padding25 {
+    padding: 5px;
   }
-  .channel-link {
-    padding: 20px 10px 20px;
-  }
-  .channel-link a {
-    width: 48%;
-  }
-  /*join*/
-  .join .join-send {
-    width: 100%;
-  }
-  .join .join-p {
-    padding: 20px 20px 40px 20px;
-  }
-  .join b {
-    display: block;
-  }
-  .join .join-tag-list li {
-    padding: 10px;
-    width: 100%;
-  }
-  .join h3 {
-    font-size: 20px;
-  }
-  /*top*/
-  .top-list .desc {
-    font-size: 20px;
-  }
-  .top-list li {
-    margin-top: 0;
-  }
-  .top-list .more {
-    margin-bottom: 15px;
-  }
-  /*.advertising-list .ad-con*/
-  .advertising-list li {
-    padding: 15px;
-  }
-  .advertising-list .ad-con {
-    padding-left: 0;
-  }
-  .advertising-list .master img {
-    width: 50px;
-  }
-  /*.product-center .*/
-  .product-center .type {
-    width: 90px;
-  }
-  .product-center .product-select {
-    margin-bottom: 0;
-  }
-  .product2 .padding-left20 {
-    padding-left: 0;
-    margin-top: 15px;
-  }
-  .product2 .pmargin {
-    margin-top: 15px;
-  }
-  .product2 .w32 {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .product2 .product2-row .w50 {
-    width: 50%;
-  }
-  .product-detail .prod-name {
-    font-size: 22px;
-    padding-top: 15px;
-  }
-  .product-detail .padding-left40 {
-    padding-left: 0;
-  }
-  .product-detail .prod-cons {
-    padding: 15px 0;
-    min-height: 200px;
-  }
-  .product-detail .swiper-button-next1 {
-    right: 0;
-  }
-  .product-detail .swiper-button-prev1 {
-    right: 40px;
-  }
-  .tablist li {
-    margin: 0 10px;
-    font-size: 16px;
-  }
-  .what0 {
-    flex-wrap: wrap-reverse;
-  }
-  .use .use-flex li {
-    width: 50%;
-  }
-  .use .master2 {
-    overflow: hidden;
-  }
-  .use .use-flex .use-title {
-    padding: 10px 5px;
-  }
-  .menthod .use-con-desc {
-    height: 75px;
-  }
-  .menthod li {
-    margin-bottom: 15px;
-  }
-  .menthod .use-item {
-    display: flex;
-    justify-content: center;
+  .changpian .changpian-list {
     flex-wrap: wrap;
   }
-  .typelists {
+  .changpian .changpian-list li {
+    width: 100%;
+    display: none;
+  }
+  .changpian .changpian-list li:nth-child(2), .changpian .changpian-list li:nth-child(1) {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
-  .miji-list {
-    margin: 0  0 20px;
+  .changpian .swiper-slide {
+    width: 100%;
+    height: 100%;
   }
-  .health .ys-con {
-    padding: 10px;
+  .song .song-list {
+    padding: 10px 0 0 0;
   }
-  .health .fon18 {
-    padding-bottom: 0;
+  .song .song-list ul li {
+    width: 46%;
+    margin-bottom: 5px;
   }
-  .health .health-list .desc {
-    height: 75px;
-    font-size: 12px;
+  .song .song-list ul li:last-child {
+    display: none;
   }
-  .health .btn-rights {
-    right: 0;
-    width: 35px;
+  .more-margin0 {
+    margin-top: 10px;
   }
-  .health .btn-lefts {
-    left: 0;
-    width: 35px;
+  .contact .contact-p1 {
+    font-size: 40px;
   }
-  .health .swiper-container-health {
-    overflow: visible;
-    height: 318px;
+  .paddingt100 {
+    padding-top: 55px;
   }
-  .book .swiper-container-book {
-    padding-top: 0;
-    overflow-x: visible;
-    height: 314px;
+  .fon24 {
+    font-size: 18px;
   }
-  .header .search-txt {
-    background: none;
-  }
-  .header .search-form {
-    border-bottom-color: rgba(224, 208, 208, 0.3);
-  }
-  .header .phone-search {
-    display: flex;
+  .xiezhen li {
     width: 100%;
     margin: 15px 0;
-    padding: 15px 0 15px 15px;
-    background: none;
   }
 }
