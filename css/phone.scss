@@ -127,8 +127,12 @@ $colorfa:#fafafa;
   }
   .song {
     .song-list{ padding: 10px 0 0 0 ;}
-    .song-list ul li{ width: 46%; margin-bottom: 5px;}
+    .song-list ul li{ width: 46%; margin-bottom: 20px;}
     .song-list ul li:last-child{ display: none;}
+    .song-list ul li:hover .song-hover{ width: 218%}
+    .song-list.song-list-4 ul li:last-child{ display: block;}
+    .song-list ul li:nth-child(2n) .song-hover{left:  auto; right:0;}
+    
   }
   .more-margin0{ margin-top: 10px;}
   .contact .contact-p1{ font-size: 40px}
@@ -140,5 +144,23 @@ $colorfa:#fafafa;
   .xiezhen {
     li{  width: 100%; margin: 15px 0;}
   }
+  // news
+  .main-con{ padding-top: 55px;}
+
+  .box-zhuanji {
+    li{ width: 45%;margin-bottom: 20px;}
+   .zhuanji-list{ justify-content: space-around}
+  }
+  .video-type {
+    .w48{ width: 100%; margin-bottom: 20px; padding-bottom: 10px;}
+  }
+  .box-video {
+    .video-name{ font-size: 16px;}
+    .video-year{ font-size: 25px;}
+  }
+  .height120{ padding-bottom: 30px;}
+
+  // 播放
+  .player-desc{ padding-left: 0;}
   
 }

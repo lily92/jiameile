@@ -182,10 +182,20 @@
   }
   .song .song-list ul li {
     width: 46%;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
   .song .song-list ul li:last-child {
     display: none;
+  }
+  .song .song-list ul li:hover .song-hover {
+    width: 218%;
+  }
+  .song .song-list.song-list-4 ul li:last-child {
+    display: block;
+  }
+  .song .song-list ul li:nth-child(2n) .song-hover {
+    left: auto;
+    right: 0;
   }
   .more-margin0 {
     margin-top: 10px;
@@ -202,5 +212,32 @@
   .xiezhen li {
     width: 100%;
     margin: 15px 0;
+  }
+  .main-con {
+    padding-top: 55px;
+  }
+  .box-zhuanji li {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+  .box-zhuanji .zhuanji-list {
+    justify-content: space-around;
+  }
+  .video-type .w48 {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  .box-video .video-name {
+    font-size: 16px;
+  }
+  .box-video .video-year {
+    font-size: 25px;
+  }
+  .height120 {
+    padding-bottom: 30px;
+  }
+  .player-desc {
+    padding-left: 0;
   }
 }

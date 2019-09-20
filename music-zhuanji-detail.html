@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/video-js-cdn.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/video.min.js"></script>
+  <script src="https://cdn.bootcss.com/video.js/7.6.5/lang/zh-CN.js"></script>
+  <script src="js/main.js"></script>
+  <title>欢子</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="flex flex-center header fix">
+  </header>
+  <!--end  header -->
+
+  <div class="page">
+    <div class="main-con  zhuanji-detail">
+      <div class="container">
+        <div class="zhuanji-select">
+          <span id="slect_txt" data-id="1">得到你的人却得不到你的心</span>
+          <span class="select-icon"></span>
+          <div class="select-list">
+            <ul>
+              <li data-id="1">过渡期</li>
+              <li data-id="2">备胎</li>
+              <li data-id="1">过渡期</li>
+              <li data-id="1">过渡期</li>
+              <li data-id="1">过渡期</li>
+              <li data-id="1">过渡期</li>
+            </ul>
+          </div>
+          <script>
+            $(function () {
+              $('.select-icon').click(function (e) {
+                e.preventDefault();
+                $('.select-list').stop().slideToggle();
+              });
+
+              $('.select-list li').click(function (e) {
+                e.preventDefault();
+                var _this = $(this)
+                $('#slect_txt').text(_this.text());
+                $('#slect_txt').data('id', _this.data('id'))
+                $('.select-list').stop().slideUp();
+
+              });
+            })
+          </script>
+        </div>
+        <div class="detail-con flex">
+          <div class="player positionr w50">
+            <img src="images/zhuanji-detail.jpg" alt="" srcset="" class="w100 visible-hidden">
+            <div class="positionb flex" id="zhuanji-detail">
+              <video id="my-player" class="video-js" preload="auto" controls poster="//vjs.zencdn.net/v/oceans.png"
+               >
+                <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                </source>
+                <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                </source>
+                <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                </source>
+                <p class="vjs-no-js">
+                  更新浏览器
+                  <a href="https://videojs.com/html5-video-support/" target="_blank">
+                    支持
+                  </a>
+                </p>
+              </video>
+            </div>
+            <!-- <div class="controler  flex">
+              <div class="m-sheny icon"></div>
+              <div class="m-prev icon"></div>
+              <div class="m-player" id="palyer_btn"></div>
+              <div class="m-next icon"></div>
+              <div class="m-pause1 icon"></div>
+              <div class="m-xunhuan icon " id="xunhuan"></div>
+            </div> -->
+            <script>
+              $(function () {
+                var options = {
+                  loop: false,
+                  language: 'zh-CN'
+                };
+                var player = videojs('my-player', options, function onPlayerReady() {
+                  // $('#palyer_btn').click(function (e) {
+                  //   e.preventDefault();
+                  //   if (!$(this).hasClass('pause')) {
+                  //     _this.play();
+                  //     $(this).addClass('pause');
+                  //   } else {
+                  //     _this.pause();
+                  //     $(this).removeClass('pause');
+                  //   }
+                  // });
+
+                  // How about an event listener?
+                  // this.on('ended', function () {
+                  //   videojs.log('播放完毕');
+                  // });
+
+                  // 控制是否循环
+                  // $('.xunhuan').click(function (e) {
+                  //   e.preventDefault();
+                  //   options.loop = !options.loop
+                  // });
+                });
+              
+              })
+            </script>
+
+          </div>
+          <div class="player-desc w50">
+            <p class="music-title  fon22">得到你的人却得不到你的心</p>
+            <div class="detail-describe">
+              <p>专辑类型：录音室专辑</p>
+              <p>唱片公司：孔雀唱片</p>
+              <p>专辑简介：</p>
+              <div class="jianjie line5 positionr ">
+                步入2009年，让人最想HIGH歌的一张唱碟
+                《得到你的人却得不到你的心》，欢子的最新蓝调情伤作品，伤感，却让人去思考自己的爱情世界。热恋初期，每个人都会憧憬着自己的未来，故事发展下去，男女主角之间的感情因时空交错而变了质，得到你的人却得不到你的心。歌曲里欢子就是想表达这样的一种信息。欢子在制作的过程中同时亦感受到，既然爱情可以一开始轰轰烈烈的从零发展到有，在遇到挫折时为什么偏偏不能平静地坐在一起去解决，谁
+                歌曲里欢子就是想表达这样的一种信息。欢子在制作的过程中同时亦感受到，既然爱情可以一开始轰轰烈烈的从零发展到有，在遇到挫折时为什么偏偏不能平静地坐在一起去解决，谁
+                <span class="btn-icondown"></span>
+              </div>
+              <script>
+                $(function () {
+                  $('.btn-icondown').click(function (e) {
+                    e.preventDefault();
+                    $(this).toggleClass('active')
+                    $('.jianjie').toggleClass('line5');
+                    $('.jianjie').toggleClass('jianjie-auto')
+
+                  });
+                })
+              </script>
+            </div>
+            <div>
+              <p>专辑曲目（13）</p>
+              <div>
+                <ul class="qumu-list">
+                  <li> 01. 得到你的人却得不到你的心</li>
+                  <li>02. 愚爱</li>
+                  <li>03. 只想做你的男人</li>
+                  <li>04. 为什么你要离开我</li>
+                  <li>05. 原谅我一次</li>
+                  <li>06. 永远不分开</li>
+                  <li>07. 伤心的时候可以听情歌</li>
+                  <li>08. 得到你的人却得不到你的心</li>
+                  <li>09. 愚爱</li>
+                  <li>10. 只想做你的男人</li>
+                  <li>11. 为什么你要离开我</li>
+                  <li>12. 原谅我一次</li>
+                  <li>13. 永远不分开</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <p class="copy-right">Copyright © </p>
+  </div>
+</body>
+
+</html>

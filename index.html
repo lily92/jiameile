@@ -7,10 +7,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/video-js-cdn.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
   <script src="js/jquery.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/video.min.js"></script>
+  <script src="https://cdn.bootcss.com/video.js/7.6.5/lang/zh-CN.js"></script>
   <script src="js/main.js"></script>
   <title>欢子</title>
 </head>
@@ -20,10 +25,15 @@
   <header class="flex flex-center header fix">
   </header>
   <!--end  header -->
-  <div class="page">
+  <style>
+    body {
+      background: #000
+    }
+  </style>
+  <div class="page-index">
     <div class="swiper-container " id="page">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <div class="swiper-slide" data-hash="home">
           <div class="swiper-container swiper-container-banner">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
@@ -44,7 +54,7 @@
             <div class="swiper-pagination swiper-pagination-banner"></div>
           </div>
         </div>
-        <div class="swiper-slide about">
+        <div class="swiper-slide about" data-hash="about">
           <p class="about-txt ">About</p>
           <div class="container row flex  flex-center">
             <div class="col-sm-4">
@@ -94,20 +104,39 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide video">
+        <div class="swiper-slide video" data-hash="video">
           <div>
             <p class="title">视频中心</p>
             <div class="positionr video-con">
               <!-- 视频占位符，勿读后台 -->
               <img src="images/index-video.jpg" alt="" srcset="">
               <div class="positionb ">
-                <video controls
-                  src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
-                  class="w100" poster="images/index-video-img1.jpg" id="video"></video>
+                <video id="my-player" class="video-js" preload="auto" controls poster="images/index-video-img1.jpg">
+                  <source
+                    src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                    type="video/mp4">
+                  </source>
+                  <source
+                    src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                    type="video/webm">
+                  </source>
+                  <source
+                    src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                    type="video/ogg">
+                  </source>
+                  <p class="vjs-no-js">
+                    更新浏览器
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">
+                      支持
+                    </a>
+                  </p>
+                </video>
+
+
               </div>
             </div>
             <div>
-              <a class="more ">
+              <a class="more " href="video.html">
                 <span class="pull-right"><img src="images/more.png" alt="" srcset=""></span>
                 <span>查看更多</span>
               </a>
@@ -115,15 +144,15 @@
             </div>
           </div>
         </div>
-        <div class="swiper-slide changpian">
+        <div class="swiper-slide changpian" data-hash="changpian">
           <p class="title-changp fon-arial hidden-xs">fandy su's music</p>
           <div class="container ">
             <div class="flex">
               <div class="w40 positionr hidden-xs">
                 <img src="images/zhuanji-bg1.jpg" alt="" srcset="" class="w100">
-                <div class=" positionb">
+                <a class=" positionb" href="music-zhuanji-detail.html">
                   <img src="images/zhaunji-img1.jpg" alt="" srcset="" class="w100">
-                </div>
+                </a>
               </div>
               <div class="w60">
                 <ul class="changpian-list">
@@ -132,20 +161,20 @@
                       <!--star  占位符，勿读后台 -->
                       <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100 visible-hidden">
                       <!--end  占位符，勿读后台 -->
-                      <div class="positionb bgf  padding25 text-center flex flex-center">
+                      <a class="positionb bgf  padding25 text-center flex flex-center" href="music-zhuanji-detail.html">
                         <div>
-                          <p class="fon20 changpian-name">《其实很寂寞》</p>
+                          <p class="fon18 changpian-name">《其实很寂寞》</p>
                           <p class="line4">这次创作的歌曲取自于欢子巡回演出所产生的创作灵感，充满了国际观的音乐风格以及多元化的曲风编制。更不同于往的地方...</p>
                         </div>
-                      </div>
+                      </a>
                     </div>
                     <div class="positionr">
                       <!--star  占位符，勿读后台 -->
                       <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100">
                       <!--end  占位符，勿读后台 -->
-                      <div class="positionb">
+                      <a class="positionb" href="music-zhuanji-detail.html">
                         <img src="images/zhuanji-img2.jpg" alt="" srcset="" class="w100">
-                      </div>
+                      </a>
                     </div>
                   </li>
                   <li>
@@ -153,20 +182,20 @@
                       <!--star  占位符，勿读后台 -->
                       <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100 visible-hidden">
                       <!--end  占位符，勿读后台 -->
-                      <div class="positionb bgf  padding25 text-center flex flex-center">
+                      <a class="positionb bgf  padding25 text-center flex flex-center" href="music-zhuanji-detail.html">
                         <div>
-                          <p class="fon20 changpian-name">《其实很寂寞》</p>
+                          <p class="fon18 changpian-name">《其实很寂寞》</p>
                           <p class="line4">这次创作的歌曲取自于欢子巡回演出所产生的创作灵感，充满了国际观的音乐风格以及多元化的曲风编制。更不同于往的地方...</p>
                         </div>
-                      </div>
+                      </a>
                     </div>
                     <div class="positionr">
                       <!--star  占位符，勿读后台 -->
                       <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100">
                       <!--end  占位符，勿读后台 -->
-                      <div class="positionb">
+                      <a class="positionb" href="music-zhuanji-detail.html">
                         <img src="images/zhuanji-img2.jpg" alt="" srcset="" class="w100">
-                      </div>
+                      </a>
                     </div>
                   </li>
                   <li>
@@ -174,43 +203,45 @@
                       <!--star  占位符，勿读后台 -->
                       <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100 visible-hidden">
                       <!--end  占位符，勿读后台 -->
-                      <div class="positionb bgf  padding25 text-center flex flex-center">
+                      <a class="positionb bgf  padding25 text-center flex flex-center" href="music-zhuanji-detail.html">
                         <div>
-                          <p class="fon20 changpian-name">《其实很寂寞》</p>
+                          <p class="fon18 changpian-name">《其实很寂寞》</p>
                           <p class="line4">这次创作的歌曲取自于欢子巡回演出所产生的创作灵感，充满了国际观的音乐风格以及多元化的曲风编制。更不同于往的地方...</p>
                         </div>
-                      </div>
+                      </a>
                     </div>
                     <div class="positionr">
                       <!--star  占位符，勿读后台 -->
                       <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100">
                       <!--end  占位符，勿读后台 -->
-                      <div class="positionb">
+                      <a class="positionb" href="music-zhuanji-detail.html">
                         <img src="images/zhuanji-img2.jpg" alt="" srcset="" class="w100">
-                      </div>
+                      </a>
                     </div>
                   </li>
+
+
                 </ul>
-               
+
               </div>
             </div>
-            <a class="more more-margin0 ">
+            <a class="more more-margin0 " href="music-zhuanji.html">
               <span class="pull-right"><img src="images/more.png" alt="" srcset=""></span>
               <span>查看更多</span>
             </a>
           </div>
 
         </div>
-        <div class="swiper-slide song">
+        <div class="swiper-slide song" data-hash="song">
           <p class="title-changp fon-arial hidden-xs">fandy su's music</p>
           <div class="container ">
             <div class="song-tab">
-              <a href="" class="cur">热门歌曲</a>
-              <a href="">经典歌曲</a>
+              <a class="cur" href="music-danqu.html">热门歌曲</a>
+              <a href="music-danqu.html">经典歌曲</a>
             </div>
             <div class="song-list">
               <ul class="flex">
-                <li>
+                <li class="positionr ">
                   <div class="positionr">
                     <!-- 占位符，勿读后台 -->
                     <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100">
@@ -221,9 +252,35 @@
                   <div class="song-txt">
                     <p class="fon16">其实很寂寞</p>
                     <p class="fon12 nowarp">这次创作的歌曲取自于欢子巡回演...</p>
+                  </div>
+                  <div class="song-hover flex">
+                    <div class="song-img positionr">
+                      <!-- 图片站位符，勿读后台 -->
+                      <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      <div class="positionb">
+                        <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      </div>
+                      <div class="positionb flex-center flex">
+                        <!-- data-num为li的索引值 -->
+                        <div class="index-play-icon" data-num='0' data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                        type="video/mp4'></div>
+                      </div>
+                    </div>
+                    <div class="song-con flex">
+                      <p class="fon16 color0">其实很寂寞</p>
+                      <p class="fon12 line4">这次创作的歌曲取自于欢子巡回演出所产生的创作灵感，充满了国际观的音乐风格以及多元化的曲风编制。更不同于往的地方... </p>
+                      <div class="fon12">
+                        <p>作词：欢子Fandy Su</p>
+                        <p>作曲：欢子</p>
+                        <p>编曲：胜屿</p>
+                        <p>音乐风格：流行/摇滚</p>
+                        <p>演唱：欢子Fandy Su</p>
+
+                      </div>
+                    </div>
                   </div>
                 </li>
-                <li>
+                <li class="positionr ">
                   <div class="positionr">
                     <!-- 占位符，勿读后台 -->
                     <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100">
@@ -234,9 +291,35 @@
                   <div class="song-txt">
                     <p class="fon16">其实很寂寞</p>
                     <p class="fon12 nowarp">这次创作的歌曲取自于欢子巡回演...</p>
+                  </div>
+                  <div class="song-hover flex">
+                    <div class="song-img positionr">
+                      <!-- 图片站位符，勿读后台 -->
+                      <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      <div class="positionb">
+                        <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      </div>
+                      <div class="positionb flex-center flex">
+                        <!-- data-num为li的索引值 -->
+                        <div class="index-play-icon" data-num='0' data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                          type="video/mp4'></div>
+                      </div>
+                    </div>
+                    <div class="song-con flex">
+                      <p class="fon16 color0">其实很寂寞</p>
+                      <p class="fon12 line4">这次创作的歌曲取自于欢子巡回演出所产生的创作灵感，充满了国际观的音乐风格以及多元化的曲风编制。更不同于往的地方... </p>
+                      <div class="fon12">
+                        <p>作词：欢子Fandy Su</p>
+                        <p>作曲：欢子</p>
+                        <p>编曲：胜屿</p>
+                        <p>音乐风格：流行/摇滚</p>
+                        <p>演唱：欢子Fandy Su</p>
+
+                      </div>
+                    </div>
                   </div>
                 </li>
-                <li>
+                <li class="positionr ">
                   <div class="positionr">
                     <!-- 占位符，勿读后台 -->
                     <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100">
@@ -247,9 +330,35 @@
                   <div class="song-txt">
                     <p class="fon16">其实很寂寞</p>
                     <p class="fon12 nowarp">这次创作的歌曲取自于欢子巡回演...</p>
+                  </div>
+                  <div class="song-hover flex">
+                    <div class="song-img positionr">
+                      <!-- 图片站位符，勿读后台 -->
+                      <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      <div class="positionb">
+                        <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      </div>
+                      <div class="positionb flex-center flex">
+                        <!-- data-num为li的索引值 -->
+                        <div class="index-play-icon" data-num='1' data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                            type="video/mp4'></div>
+                      </div>
+                    </div>
+                    <div class="song-con flex">
+                      <p class="fon16 color0">其实很寂寞</p>
+                      <p class="fon12 line4">这次创作的歌曲取自于欢子巡回演出所产生的创作灵感，充满了国际观的音乐风格以及多元化的曲风编制。更不同于往的地方... </p>
+                      <div class="fon12">
+                        <p>作词：欢子Fandy Su</p>
+                        <p>作曲：欢子</p>
+                        <p>编曲：胜屿</p>
+                        <p>音乐风格：流行/摇滚</p>
+                        <p>演唱：欢子Fandy Su</p>
+
+                      </div>
+                    </div>
                   </div>
                 </li>
-                <li>
+                <li class="positionr ">
                   <div class="positionr">
                     <!-- 占位符，勿读后台 -->
                     <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100">
@@ -260,9 +369,35 @@
                   <div class="song-txt">
                     <p class="fon16">其实很寂寞</p>
                     <p class="fon12 nowarp">这次创作的歌曲取自于欢子巡回演...</p>
+                  </div>
+                  <div class="song-hover flex">
+                    <div class="song-img positionr">
+                      <!-- 图片站位符，勿读后台 -->
+                      <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      <div class="positionb">
+                        <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      </div>
+                      <div class="positionb flex-center flex">
+                        <!-- data-num为li的索引值 -->
+                        <div class="index-play-icon" data-num='2' data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                              type="video/mp4'></div>
+                      </div>
+                    </div>
+                    <div class="song-con flex">
+                      <p class="fon16 color0">其实很寂寞</p>
+                      <p class="fon12 line4">这次创作的歌曲取自于欢子巡回演出所产生的创作灵感，充满了国际观的音乐风格以及多元化的曲风编制。更不同于往的地方... </p>
+                      <div class="fon12">
+                        <p>作词：欢子Fandy Su</p>
+                        <p>作曲：欢子</p>
+                        <p>编曲：胜屿</p>
+                        <p>音乐风格：流行/摇滚</p>
+                        <p>演唱：欢子Fandy Su</p>
+
+                      </div>
+                    </div>
                   </div>
                 </li>
-                <li>
+                <li class="positionr ">
                   <div class="positionr">
                     <!-- 占位符，勿读后台 -->
                     <img src="images/zhuanji-bg2.jpg" alt="" srcset="" class="w100">
@@ -273,19 +408,71 @@
                   <div class="song-txt">
                     <p class="fon16">其实很寂寞</p>
                     <p class="fon12 nowarp">这次创作的歌曲取自于欢子巡回演...</p>
+                  </div>
+                  <div class="song-hover flex">
+                    <div class="song-img positionr">
+                      <!-- 图片站位符，勿读后台 -->
+                      <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      <div class="positionb">
+                        <img src="images/song-img.jpg" alt="" srcset="" class="w100">
+                      </div>
+                      <div class="positionb flex-center flex">
+                        <!-- data-num为li的索引值 -->
+                        <div class="index-play-icon" data-num='3' data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+                                type="video/mp4'></div>
+                      </div>
+                    </div>
+                    <div class="song-con flex">
+                      <p class="fon16 color0">其实很寂寞</p>
+                      <p class="fon12 line4">这次创作的歌曲取自于欢子巡回演出所产生的创作灵感，充满了国际观的音乐风格以及多元化的曲风编制。更不同于往的地方... </p>
+                      <div class="fon12">
+                        <p>作词：欢子Fandy Su</p>
+                        <p>作曲：欢子</p>
+                        <p>编曲：胜屿</p>
+                        <p>音乐风格：流行/摇滚</p>
+                        <p>演唱：欢子Fandy Su</p>
+
+                      </div>
+                    </div>
                   </div>
                 </li>
 
+
               </ul>
+              <audio src="" id="audio"></audio>
+              <script>
+                $(function () {
+                  var audio = document.getElementById('audio');
+                  $('.index-play-icon').click(function (e) {
+                    e.preventDefault();
+                    $('.song-list li').removeClass('cur')
+                    var index = $(this).data('num');
+                    var url = $(this).data('url');
+                    $('#audio').attr('src', url);
+                    $('.song-list li').eq(Number(index)).addClass('cur')
+                    if ($(this).hasClass('active')) {
+                      console.log('暂停')
+                      audio.pause();// 这个就是暂停
+                      $(this).removeClass('active');
+                      $('.song-list li').eq(Number(index)).removeClass('cur')
+                    } else {
+                      $(this).addClass('active');
+                      audio.play();
+                      console.log('播放')
+                    }
+
+                  });
+                })
+              </script>
             </div>
-            <a class="more more-margin0 ">
+            <a class="more more-margin0 " href="music-danqu.html">
               <span class="pull-right"><img src="images/more.png" alt="" srcset=""></span>
               <span>查看更多</span>
             </a>
           </div>
 
         </div>
-        <div class="swiper-slide contact flex">
+        <div class="swiper-slide contact flex" data-hash="contact">
 
           <div class="w100 text-center paddingt100">
             <p class="contact-p1">contact us</p>
@@ -314,12 +501,16 @@
   <!-- <footer class="footer text-center fon14">
   </footer> -->
   <!-- end footer -->
+  <!-- <script src="js/TweenMax.min.js"></script> -->
   <script>
     $(function () {
       var swiper = new Swiper('#page', {
         direction: 'vertical',
         initialSlide: 0,
         mousewheel: true,
+        hashNavigation: {
+          watchState: true,
+        },
         keyboard: {
           enabled: true,
           onlyInViewport: true,
@@ -327,7 +518,44 @@
         pagination: {
           el: '#fullpage',
           clickable: true,
+          renderBullet: function (index, className) {
+            let text = ''
+            switch (index) {
+              case 0:
+                text = '首页'
+                break
+              case 1:
+                text = '关于'
+                break
+              case 2:
+                text = '视频'
+                break
+              case 3:
+                text = '写真'
+                break
+              case 4:
+                text = '音乐'
+                break
+              case 5:
+                text = '联系我们'
+                break
+            }
+            return (
+              '<span class="' +
+              className +
+              '"><label>' +
+              text +
+              '</label></span>'
+            )
+          },
         },
+        on: {
+          // setTranslate: function () {
+          //   this.$wrapperEl.transition('')
+          //   TweenMax.to(this.$wrapperEl, 1.5, { y: this.translate, ease: Power4.easeOut })
+          // }
+        },
+
       });
       var swiperBanner = new Swiper('.swiper-container-banner', {
         spaceBetween: 50,
@@ -345,7 +573,14 @@
         },
       });
 
-      
+
+      var options = {
+        loop: false,
+        language: 'zh-CN'
+      };
+      var player_video = videojs('my-player', options, function onPlayerReady() {
+      });
+
     })
   </script>
 </body>

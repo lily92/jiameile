@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/video-js-cdn.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" media="screen and (max-width:767px)" href="css/phone.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/video.min.js"></script>
+  <script src="https://cdn.bootcss.com/video.js/7.6.5/lang/zh-CN.js"></script>
+  <script src="js/main.js"></script>
+  <title>欢子</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="flex flex-center header fix">
+  </header>
+  <!--end  header -->
+
+  <div class="page">
+    <div class="main-con ">
+      <div class="height120">
+        <div class="video-type container flex">
+          <div class="w48 flex">
+            <div class="flex-shirk0">
+              <b class="fon16">视频分类：</b>
+            </div>
+            <div class="select">
+              <a href="" class="cur">全部</a>
+              <a href="">MV</a>
+              <a href="">现场/live</a>
+              <a href="">娱乐视频</a>
+              <a href="">其他</a>
+            </div>
+          </div>
+          <div class="w4  hidden-xs">&nbsp;</div>
+          <div class="w48 flex item positionr ">
+            <div class="flex-shirk0">
+              <b class="fon16">
+                时间筛选：
+              </b>
+
+            </div>
+            <div class="select">
+              <a href="">全部</a>
+              <a href="" class="cur">2019</a>
+              <a href="">2018</a>
+              <a href="">2017</a>
+              <a href="">2016</a>
+              <a href="">2017</a>
+              <a href="">2016</a>
+
+              <a href="">2017</a>
+              <a href="">2016</a>
+              <a href="">2017</a>
+              <a href="">2016</a>
+              <a href="">2017</a>
+              <a href="">2016</a>
+              <a href="">2017</a>
+              <a href="">2016</a>
+            </div>
+            <div class="down" id="down">展开</div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(function () {
+          $('#down').click(function (e) {
+            e.preventDefault();
+
+            var _this = $(this);
+            console.log(_this.text())
+            if (_this.text() == '展开') {
+              _this.addClass('active');
+              _this.text('收起')
+              $('.item').addClass('active')
+            } else {
+
+              _this.removeClass('active');
+              _this.text('展开')
+              $('.item').removeClass('active')
+            }
+
+          });
+        })
+      </script>
+      <div class="box-video">
+        <div class="swiper-container video-page">
+          <div class="swiper-wrapper">
+            <a class="swiper-slide video-li"
+              data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'>
+              <div class="positionr">
+                <img src="images/video-img-bg.jpg" alt="" srcset="" class="w100">
+                <div class="positionb">
+                  <img src="images/video-img-bg.jpg" alt="" srcset="" class="w100">
+                </div>
+              </div>
+              <div>
+                <p class="video-name"><b>我的青春有你</b></p>
+                <p class="video-year"><b>2019</b></p>
+              </div>
+            </a>
+            <a class="swiper-slide video-li"
+              data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'>
+              <div class="positionr">
+                <img src="images/video-img-bg.jpg" alt="" srcset="" class="w100">
+                <div class="positionb">
+                  <img src="images/video-img-bg.jpg" alt="" srcset="" class="w100">
+                </div>
+              </div>
+              <div>
+                <p class="video-name"><b>我的青春有你</b></p>
+                <p class="video-year"><b>2019</b></p>
+              </div>
+            </a>
+            <a class="swiper-slide video-li"
+              data-url='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'>
+              <div class="positionr">
+                <img src="images/video-img-bg.jpg" alt="" srcset="" class="w100">
+                <div class="positionb">
+                  <img src="images/video-img-bg.jpg" alt="" srcset="" class="w100">
+                </div>
+              </div>
+              <div>
+                <p class="video-name"><b>我的青春有你</b></p>
+                <p class="video-year"><b>2019</b></p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="page-num text-center">
+          <a href="">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+          <a href="">5</a>
+        </div>
+      </div>
+
+    </div>
+    <p class="copy-right">Copyright © </p>
+  </div>
+
+  <!-- 视频播放 -->
+  <div class="play-video  no trans">
+    <div class="video-main positionr">
+      <img src="images/video-img-bg.jpg" alt="" srcset="" class="w100">
+      <div class=" positionb">
+        <video id="my-player" class="video-js" preload="auto" controls poster="images/index-video-img1.jpg"
+          >
+          <source
+            src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+            type="video/mp4">
+          </source>
+          <source
+            src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+            type="video/webm">
+          </source>
+          <source
+            src="http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
+            type="video/ogg">
+          </source>
+          <p class="vjs-no-js">
+            更新浏览器
+            <a href="https://videojs.com/html5-video-support/" target="_blank">
+              支持
+            </a>
+          </p>
+        </video>
+      </div>
+      <div class="btn-close">
+        <img src="images/btn-close.png" alt="" srcset="" id="btn_colse">
+      </div>
+    </div>
+  </div>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 2,
+      spaceBetween: 100,
+      freeMode: true,
+      mousewheel: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        }
+      },
+    });
+    $(function () {
+      var options = {
+        loop: false,
+        language: 'zh-CN'
+      };
+      var player_video = videojs('my-player', options, function onPlayerReady() {
+      });
+
+      $('.video-li').click(function (e) {
+        e.preventDefault();
+        var url = $(this).data('url');
+        $('#video').attr('src', url);
+        $('.play-video').removeClass('no');
+        player_video.play();
+      });
+
+      $('#btn_colse').click(function (e) {
+        e.preventDefault();
+        $('.play-video').addClass('no')
+        player_video.pause();
+      });
+
+    })
+  </script>
+
+</body>
+
+</html>
